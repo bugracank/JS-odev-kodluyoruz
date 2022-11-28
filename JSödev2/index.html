@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .none {
+            display: none;
+        }
+        .alert {
+            position: absolute;
+            margin-left:105rem;
+            margin-top:1rem;
+            background:red;
+            padding:1rem 0.4rem 1rem 1rem;
+            color:white;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-container {
+            width: 100%;
+            height:300px;
+            background-color: #F78501;
+        }
+        img {
+            margin-top:5rem;
+            margin-bottom: 2rem;
+            width: 400px;
+            z-index: 100;
+            background-color: #fff;
+        }
+        h2 {
+            color:#fff;
+        }
+        #task {
+            width:100rem;
+            height:2rem;
+            margin-top: 2rem;
+        }
+        #button {
+            height:2rem;
+            padding:0.5rem;
+            width:7rem;
+            border:none;
+            background-color: gray;
+            opacity: 0.8;
+        }
+        #button:hover {
+            opacity:0.5;
+            cursor:pointer;
+        }
+        .fa-xmark {
+            margin-left: 0.7rem;
+        }
+        .fa-xmark:hover {
+            margin-left: 0.7rem;
+            cursor:pointer;
+        }
+       
+        .innerlist {
+            background-color:gray;
+            color:#fff;
+            padding:1rem 1rem;
+            list-style:none;
+            margin-top: 0.4rem;
+        }
+        .fa-x {
+            margin-left:110rem;
+        }
+        .fa-x:hover {
+            color:red;
+            cursor:pointer;
+        }
+       
+    </style>
+</head>
+<body>
+    <div  class="none" >
+        Boş ekleme yapılamaz!   <i class="fa-solid fa-xmark"></i>
+    </div>
+    
+    <div class="container">
+        <div class="img-container" >
+            <img src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png" />
+            <h2>Yapılacaklar Listesi</h2>
+        </div>
+        
+        <div>
+            <input type="text" id="task" placeholder="Bugün ne yapacaksın?" />
+            <button id="button">Ekle</button>
+        </div>
+    </div>
+    
+
+
+
+
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
