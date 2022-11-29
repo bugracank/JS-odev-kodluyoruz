@@ -1,28 +1,44 @@
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function () {
+    var li = this.parentElement;
+    li.style.display = "none";
+  };
+}
+
+var ul = document.querySelector("ul");
+ul.addEventListener("click", function (e) {
+  if (e.target.tagName === "LI") {
+    e.target.classList.toggle("active");
+  }
+});
+var alert = document.querySelector(".none");
 document.querySelector("#button").onclick = function () {
   if (document.querySelector("#task").value.length == 0) {
-    let alert1 = document.querySelector(".none");
-    alert1.classList.add("alert");
-    alert1.classList.remove("none");
+    alert.classList.add("alert");
+    alert.classList.remove("none");
   } else {
-    document.querySelector(".container").innerHTML += ` 
-    <ul id="list" >
-        <li class="innerlist" >
-            ${
-              document.querySelector("#task").value
-            }  <i id="close" class="fa-solid fa-x"></i>
-        </li>  
-    </ul>
-    
-    `;
+    var li = document.createElement("li");
+    var value = document.querySelector("#task").value;
+    var txt = document.createTextNode(value);
+    li.appendChild(txt);
+    document.getElementById("list").appendChild(li);
+  }
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function () {
+      var div = this.parentElement;
+      div.style.display = "none";
+    };
   }
 };
 document.querySelector(".fa-xmark").onclick = function () {
-  let d = document.querySelector(".alert");
-  d.classList.add("none");
-  d.classList.remove("alert");
-};
-document.querySelector("#close").onclick = function () {
-  let list = document.querySelector("#list");
-  list.classList.add("none");
-  list.classList.remove("fa-x", "fa-solid");
+  alert.classList.add("none");
+  alert.classList.remove("alert");
 };

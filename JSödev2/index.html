@@ -69,21 +69,35 @@
             margin-left: 0.7rem;
             cursor:pointer;
         }
-       
-        .innerlist {
-            background-color:gray;
-            color:#fff;
+        
+        #list {
+            margin-top: 0.5rem;
             padding:1rem 1rem;
-            list-style:none;
-            margin-top: 0.4rem;
+            list-style: none;
+            color:white;
         }
-        .fa-x {
-            margin-left:110rem;
+        .close {
+            position: relative;
+            margin-left: 105rem;
+            font-size: 2rem;
         }
-        .fa-x:hover {
+        .close:hover {
             color:red;
             cursor:pointer;
         }
+        .active {
+            text-decoration: line-through;
+            background-color:dimgray;
+            padding: 0.5rem;
+        }
+        li {
+            background-color:gray;
+            width:100vw;
+            margin-top: 0.3rem;
+            margin-left: -1rem;
+            padding: 0 0 0.5rem 1rem;
+        }
+       
        
     </style>
 </head>
@@ -99,10 +113,13 @@
         </div>
         
         <div>
-            <input type="text" id="task" placeholder="Bugün ne yapacaksın?" />
+            <input type="text" id="task" placeholder="Bugün ne yapacaksın?" value="" />
             <button id="button">Ekle</button>
         </div>
     </div>
+    <ul id="list" >
+        
+    </ul>
     
 
 
